@@ -6,7 +6,7 @@ from .managers import CustomUserManager
 
 
 class User(AbstractUser):
-    credit = models.PositiveBigIntegerField(default=0)
+    credit = models.PositiveBigIntegerField(default=0,editable=False)
 
     objects = CustomUserManager()
 
